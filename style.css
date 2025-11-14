@@ -3,11 +3,19 @@ body {
 	font-family: "Monospace";
 	font-weight: Bold;
 }
+a {
+	all: unset;
+}
+div, p, h1, h3 {
+	-webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
 .greet {
 	background-color: gray;
 	color: white;
 	display: flex;
-	height: 60px;
+	height: 80px;
 	align-items: center;
 	text-align: center;
 	position: sticky;
@@ -16,12 +24,38 @@ body {
 .greet h1 {
 	margin: 10px
 }
+.menu {
+	background-color: gray;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	height: 30px;
+}
+.menu div:not(#menu-small) {
+	background-color: rgb(64, 64, 64);
+	display: flex;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid white;
+	height: 30px;
+	width: 100px;
+}
+.menu div:hover {
+	text-decoration: underline;
+	background-color: rgb(32, 32, 32);
+}
+#menu-small {
+	background-color: rgb(64, 64, 64);
+	display: none;
+	padding-left: 20px;
+	text-align: center;
+	height: 30px;
+}
 .tom {
 	background-color: lightblue;
 	margin: 5px;
 	display: flex;
 	color: white;
-	height: 150px;
 	border: 1px solid blue;
 }
 .tom #title {
@@ -42,7 +76,6 @@ body {
 	margin: 10px;
 	padding: 0px;
 	font-size: 18px;
-	height: 90px;
 }
 .tom #description br {
 	margin: 9px;
@@ -53,10 +86,33 @@ body {
 	background-color: red;
 }
 .tom #download p {
-	-webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
 	padding: 5px;
 	margin: 10px;
 	font-size: 18px;
+}
+@media screen and (max-width: 699px) {
+	body {
+		font-weight: normal;
+	}
+	.greet h3 {
+		display: none;
+	}
+	.menu {
+		flex-direction: column;
+	}
+	.menu div:not(#menu-small) {
+		display: none;
+	}
+	#menu-small {
+		display: block;
+	}
+	#menu-small:hover~div:not(#menu-small){
+		display: block;
+	}
+	.tom #title {
+		font-size: 18px;
+	}
+	.tom #description {
+		font-size: 8px;
+	}
 }

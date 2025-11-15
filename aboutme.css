@@ -1,3 +1,44 @@
+@keyframes move-up {
+	from {
+		transform: translateY(100px);
+	}
+	70% {
+		transform: translateY(0px);
+	}
+	to {
+		transform: translateY(10px);
+	}
+}
+@keyframes move-down {
+	from {
+		transform: translateY(10px);
+	}
+	to {
+		transform: translateY(100px);
+	}
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	70% {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	70% {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 0;
+	}
+}
 #about-me-box {
 	padding: 15px 20px;
 	display: flex;
@@ -8,7 +49,7 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 24px;
-	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 }
 #about-me-box p {
 	margin: 10px;
@@ -17,8 +58,73 @@
 	margin: 10px;
 	font-size: 18px;
 }
-#self br {
-	margin: 9px;
+#pl-title {
+	font-size: 24px;
+	text-align: center;
+}
+#pl-items {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#pl-items div {
+	display: flex;
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	text-align: center;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+	flex-direction: column;
+	padding: 5px;
+	padding-top: 10px;
+}
+#pl-items div b {
+	flex-direction: column;
+	display: flex;
+	transform: translateY(100px);
+}
+#pl-items div p {
+	display: block;
+	font-size: 14px;
+	opacity: 0;
+}
+#pl-items div:hover b {
+	animation: move-up 0.5s ease-in-out;
+	transform: translateY(10px);
+}
+#pl-items div:hover p {
+	opacity: 0;
+	animation: fade-in 0.5s ease-in-out;
+	opacity: 1;
+}
+#pl-items div:not(:hover) b {
+	transform: translateY(10px);
+	animation: move-down 0.5s ease-in-out;
+	transform: translateY(100px);
+}
+#pl-items div:not(:hover) p {
+	opacity: 1;
+	animation: fade-out 0.5s ease-in-out;
+	opacity: 0;
+}
+#pl-asm {
+	background-color: orange;
+}
+#pl-cpp {
+	background-color: green;
+}
+#pl-html {
+	background-color: yellow;
+}
+#pl-css {
+	background-color: blue;
+}
+#pl-js {
+	background-color: red;
+}
+#pl-java {
+	background-color: violet;
 }
 @media screen and (max-width: 699px) {
 	#about-me-box {
@@ -26,5 +132,41 @@
 	}
 	#self {
 		font-size: 14px;
+	}
+	#pl-title {
+		font-size: 18px;
+	}
+	#pl-items {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	#pl-items div {
+		width: 40%;
+		height: 130px;
+	}
+	#pl-items div b {
+		font-size: 18px;
+	}
+	#pl-items div p {
+		font-size: 11px;
+	}
+	#pl-items div:active b {
+		animation: move-up 0.5s ease-in-out;
+		transform: translateY(10px);
+	}
+	#pl-items div:active p {
+		opacity: 0;
+		animation: fade-in 0.5s ease-in-out;
+		opacity: 1;
+	}
+	#pl-items div:not(:active) b {
+		transform: translateY(10px);
+		animation: move-down 0.5s ease-in-out;
+		transform: translateY(100px);
+	}
+	#pl-items div:not(:active) p {
+		opacity: 1;
+		animation: fade-out 0.5s ease-in-out;
+		opacity: 0;
 	}
 }

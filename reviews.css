@@ -1,0 +1,144 @@
+#rev-input {
+	margin: 5px;
+	background-color: blue;
+	color: white;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+#rev-name {
+	height: 30px;
+	max-width: 300px;
+	width: auto;
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-bottom: 5px;
+	margin-right: 30px;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+#rev-rev {
+	height: 128px;
+	width: auto;
+	margin-top: 5px;
+	margin-left: 30px;
+	margin-bottom: 5px;
+	margin-right: 30px;
+	overflow: visible;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+#rev-form {
+	display: flex;
+	border-radius: 15px;
+	font-size: 18px;
+	background-color: darkblue;
+	color: white;
+	width: auto;
+	height: 50px;
+	margin-top: 5px;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	align-items: center;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+#rev-send {
+	display: flex;
+	border-radius: 10px;
+	font-size: 18px;
+	background-color: red;
+	color: white;
+	width: 40px;
+	height: 40px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+#rev-send:hover {
+	background-color: darkred;
+}
+#rev-stars {
+	display: flex;
+	flex-direction: row-reverse;
+	border-radius: 10px;
+	font-size: 18px;
+	background-color: orange;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	color: white;
+	width: 200px;
+	height: 40px;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+#rev-input textarea {
+	display: flex;
+	border-radius: 10px;
+	font-size: 18px;
+	resize: none;
+	outline: none;
+	border: none;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+#rev-stars label div {
+	display: flex;
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	background-color: orange;
+	border-radius: 50%;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+#rev-stars input:checked ~ label div {
+	background-color: yellow;
+}
+#reviews-public {
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+}
+#loading {
+	background-color: blue;
+	color: white;
+	display: inline;
+	width: max-content;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 0 auto;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+/*rev systems (this is what all revs follow)*/
+.rev {
+	margin: 5px;
+	width: auto;
+	height: auto;
+	background-color: gray;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+	border-radius: 30px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.rev p:nth-child(1) {
+	background-color: white;
+	color: black;
+	margin: 0 auto;
+}
+.rev p:nth-child(3) {
+	background-color: black;
+	color: yellow;
+	margin-left: auto;
+}
+.rev p {
+	background-color: blue;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+	color: white;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 10px;
+}

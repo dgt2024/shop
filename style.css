@@ -44,6 +44,9 @@ div, p, h1, h3 {
 	text-decoration: underline;
 	background-color: rgb(32, 32, 32);
 }
+#menu-open {
+	display: none;
+}
 #menu-small {
 	background-color: rgb(64, 64, 64);
 	display: none;
@@ -101,13 +104,18 @@ div, p, h1, h3 {
 		flex-direction: column;
 	}
 	.menu div:not(#menu-small) {
+		width: auto;
+		border: none;
 		display: none;
 	}
 	#menu-small {
-		display: block;
+		display: flex;
+		text-align: center;
+		align-items: flex-end;
 	}
-	#menu-small:hover~div:not(#menu-small){
-		display: block;
+	#menu-open:checked~*:not(#menu-small){
+		display: flex;
+		z-index: 2;
 	}
 	.tom #title {
 		font-size: 18px;

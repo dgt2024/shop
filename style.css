@@ -18,7 +18,6 @@ div, p, h1, h3 {
 	height: 80px;
 	align-items: center;
 	text-align: center;
-	position: sticky;
 	margin: 0px;
 }
 .greet h1 {
@@ -26,23 +25,30 @@ div, p, h1, h3 {
 }
 .menu {
 	background-color: gray;
+	position: sticky;
+    top: 0;
 	color: white;
 	display: flex;
 	flex-direction: row;
 	height: 30px;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 }
-.menu div:not(#menu-small) {
+.menu a:not(#menu-small) {
 	background-color: rgb(64, 64, 64);
 	display: flex;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
 	border: 1px solid white;
 	height: 30px;
 	width: 100px;
+	border-radius: 10px;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 }
-.menu div:hover {
-	text-decoration: underline;
-	background-color: rgb(32, 32, 32);
+.menu a:not(#menu-small):hover {
+	background-color: black;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 }
 #menu-open {
 	display: none;
@@ -54,45 +60,6 @@ div, p, h1, h3 {
 	text-align: center;
 	height: 30px;
 }
-.tom {
-	background-color: lightblue;
-	margin: 5px;
-	display: flex;
-	color: white;
-	border: 1px solid blue;
-}
-.tom #title {
-	align-items: center;
-	display: flex;
-	margin: 10px;
-	padding: 0px;
-	width: 300px;
-	background-color: blue;
-	font-size: 36px;
-	text-align: center;
-}
-.tom #title p {
-	margin-left: 10px;
-}
-.tom #description {
-	display: flex;
-	margin: 10px;
-	padding: 0px;
-	font-size: 18px;
-}
-.tom #description br {
-	margin: 9px;
-}
-.tom #download {
-	display: flex;
-	align-items: center;
-	background-color: red;
-}
-.tom #download p {
-	padding: 5px;
-	margin: 10px;
-	font-size: 18px;
-}
 @media screen and (max-width: 699px) {
 	body {
 		font-weight: normal;
@@ -103,12 +70,14 @@ div, p, h1, h3 {
 	.menu {
 		flex-direction: column;
 	}
-	.menu div:not(#menu-small) {
+	.menu a:not(#menu-small) {
 		width: auto;
 		border: none;
 		display: none;
 	}
 	#menu-small {
+		position: sticky;
+    	top: 0;
 		display: flex;
 		text-align: center;
 		align-items: flex-end;
@@ -116,11 +85,5 @@ div, p, h1, h3 {
 	#menu-open:checked~*:not(#menu-small){
 		display: flex;
 		z-index: 2;
-	}
-	.tom #title {
-		font-size: 18px;
-	}
-	.tom #description {
-		font-size: 8px;
 	}
 }

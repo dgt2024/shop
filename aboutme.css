@@ -1,0 +1,30 @@
+#about-me-box {
+	padding: 15px 20px;
+	display: flex;
+	margin: 5px;
+	background-color: orange;
+	color: white;
+	border-radius: 50px;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+#about-me-box p {
+	margin: 10px;
+}
+#self {
+	margin: 10px;
+	font-size: 18px;
+}
+#self br {
+	margin: 9px;
+}
+@media screen and (max-width: 699px) {
+	#about-me-box {
+		font-size: 18px;
+	}
+	#self {
+		font-size: 14px;
+	}
+}
